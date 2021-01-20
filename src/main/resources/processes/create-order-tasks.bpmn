@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_10kafy1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.0.0">
+  <bpmn:process id="createOrderTasks" name="Create Order Tasks" isExecutable="false">
+    <bpmn:sequenceFlow id="Flow_1hfc0x8" sourceRef="StartEvent_1" targetRef="Activity_1lbbw1o" />
+    <bpmn:endEvent id="Event_0vxyfoz" name="Order Task Completed">
+      <bpmn:incoming>Flow_05lkbme</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0guk5dr" sourceRef="Activity_1lbbw1o" targetRef="approveOrder" />
+    <bpmn:startEvent id="StartEvent_1" name="Order Tasks Requested" camunda:asyncBefore="true">
+      <bpmn:outgoing>Flow_1hfc0x8</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1hblp01" messageRef="Message_1wavihr" />
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_05lkbme" sourceRef="approveOrder" targetRef="Event_0vxyfoz" />
+    <bpmn:boundaryEvent id="Event_06gelac" name="after one day" cancelActivity="false" attachedToRef="approveOrder">
+      <bpmn:outgoing>Flow_176zjg8</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_06ruky5">
+        <bpmn:timeCycle xsi:type="bpmn:tFormalExpression">R2/PT1M</bpmn:timeCycle>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_176zjg8" sourceRef="Event_06gelac" targetRef="Activity_05ltwh2" />
+    <bpmn:endEvent id="Event_1gk1ln9" name="Reminder to Approver Sent">
+      <bpmn:incoming>Flow_09u4dzj</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_09u4dzj" sourceRef="Activity_05ltwh2" targetRef="Event_1gk1ln9" />
+    <bpmn:boundaryEvent id="Event_11csxpv" name="after three days" attachedToRef="approveOrder">
+      <bpmn:outgoing>Flow_0yxrsrb</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_0bo3jiu">
+        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT3M</bpmn:timeDuration>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_0yxrsrb" sourceRef="Event_11csxpv" targetRef="Activity_03a3nyc" />
+    <bpmn:endEvent id="Event_1pfa2yv" name="Order Task Completed">
+      <bpmn:incoming>Flow_0mbg3sp</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0mbg3sp" sourceRef="Activity_03a3nyc" targetRef="Event_1pfa2yv" />
+    <bpmn:serviceTask id="Activity_03a3nyc" name="Escalate to Senior Approver" camunda:delegateExpression="${logger}">
+      <bpmn:incoming>Flow_0yxrsrb</bpmn:incoming>
+      <bpmn:outgoing>Flow_0mbg3sp</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_05ltwh2" name="Remind Approver" camunda:delegateExpression="${logger}">
+      <bpmn:incoming>Flow_176zjg8</bpmn:incoming>
+      <bpmn:outgoing>Flow_09u4dzj</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Activity_1lbbw1o" name="Order Material User Task" camunda:assignee="${assignee}">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="country" label="Country" type="string" />
+          <camunda:formField id="promoCode" label="Promo Code" type="string" />
+          <camunda:formField id="quantity" label="Quantity (number) ?" type="long" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1hfc0x8</bpmn:incoming>
+      <bpmn:outgoing>Flow_0guk5dr</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="approveOrder" name="Approve Order">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${emailApprover}" event="start" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0guk5dr</bpmn:incoming>
+      <bpmn:outgoing>Flow_05lkbme</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmn:message id="Message_1wavihr" name="CreateOrderTasksStartMsg" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="createOrderTasks">
+      <bpmndi:BPMNEdge id="Flow_0mbg3sp_di" bpmnElement="Flow_0mbg3sp">
+        <di:waypoint x="680" y="120" />
+        <di:waypoint x="812" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yxrsrb_di" bpmnElement="Flow_0yxrsrb">
+        <di:waypoint x="510" y="189" />
+        <di:waypoint x="510" y="120" />
+        <di:waypoint x="580" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09u4dzj_di" bpmnElement="Flow_09u4dzj">
+        <di:waypoint x="680" y="390" />
+        <di:waypoint x="812" y="390" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_176zjg8_di" bpmnElement="Flow_176zjg8">
+        <di:waypoint x="510" y="305" />
+        <di:waypoint x="510" y="390" />
+        <di:waypoint x="580" y="390" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05lkbme_di" bpmnElement="Flow_05lkbme">
+        <di:waypoint x="570" y="247" />
+        <di:waypoint x="812" y="247" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0guk5dr_di" bpmnElement="Flow_0guk5dr">
+        <di:waypoint x="400" y="247" />
+        <di:waypoint x="470" y="247" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hfc0x8_di" bpmnElement="Flow_1hfc0x8">
+        <di:waypoint x="215" y="247" />
+        <di:waypoint x="300" y="247" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0vxyfoz_di" bpmnElement="Event_0vxyfoz">
+        <dc:Bounds x="812" y="229" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="803" y="272" width="55" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0tnyl0p_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="229" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="167" y="272" width="60" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1gk1ln9_di" bpmnElement="Event_1gk1ln9">
+        <dc:Bounds x="812" y="372" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="795" y="415" width="71" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1pfa2yv_di" bpmnElement="Event_1pfa2yv">
+        <dc:Bounds x="812" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="803" y="145" width="55" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1kcp36s_di" bpmnElement="Activity_03a3nyc">
+        <dc:Bounds x="580" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1fjdktm_di" bpmnElement="Activity_05ltwh2">
+        <dc:Bounds x="580" y="350" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0lg8jkm_di" bpmnElement="Activity_1lbbw1o">
+        <dc:Bounds x="300" y="207" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0j3htvp_di" bpmnElement="approveOrder">
+        <dc:Bounds x="470" y="207" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_015zn3g_di" bpmnElement="Event_11csxpv">
+        <dc:Bounds x="492" y="189" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="421" y="183" width="77" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0e73vq6_di" bpmnElement="Event_06gelac">
+        <dc:Bounds x="492" y="269" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="427" y="303" width="65" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
