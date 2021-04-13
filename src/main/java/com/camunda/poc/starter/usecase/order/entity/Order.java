@@ -32,39 +32,41 @@ public class Order {
             inverseJoinColumns = @JoinColumn(name = "pm_order_id"))
     List<OrderItem> itemsOrdered;
 
-    @Column(nullable=true)
+    @Column(name="order_date", nullable=true)
     @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate;
 
-    @Column(nullable=true)
+    @Column(name="order_key", nullable=true)
     private String orderKey;
 
-    @Column(nullable=true)
+    @Column(name="comment", nullable=true)
     private String comment;
 
-    @Column(nullable=true)
+    @Column(name="started", nullable=true)
     private boolean started;
-    @Column(nullable=true)
+
+    @Column(name="approved", nullable=true)
     private boolean approved;
-    @Column(nullable=true)
+
+    @Column(name="rejected", nullable=true)
     private boolean rejected;
 
-    @Column(nullable=true)
+    @Column(name="status", nullable=true)
     private String status;
 
-    @Column(nullable=true)
+    @Column(name="sales_manager", nullable=true)
     private String salesManager;
 
-    @Column(nullable=true)
+    @Column(name="category", nullable=true)
     private String category;
 
-    @Column(nullable=true)
+    @Column(name="rep_name", nullable=true)
     private String repName;
 
-    @Column(nullable=true)
+    @Column(name="email", nullable=true)
     private String email;
 
-    @Column(nullable=true)
+    @Column(name="delivery_address", nullable=true)
     private String deliveryAddress;
 
     public Date getOrderDate() {

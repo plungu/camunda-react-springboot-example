@@ -7,6 +7,7 @@ import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Profile;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,6 +22,7 @@ import java.util.logging.Logger;
  * illustrating how a Java Delegate can be used 
  * from within a BPMN 2.0 Service Task.
  */
+@Profile("exec")
 @Component
 public class ExternalTaskClientImpl {
  

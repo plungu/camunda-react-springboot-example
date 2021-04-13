@@ -20,17 +20,17 @@ public class StockItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable=false)
+    @Column(name="product", nullable=false)
     private String product;
-    @Column(nullable=true)
+    @Column(name="pmi_code", nullable=true)
     private String pmiCode;
-    @Column(nullable=true)
+    @Column(name="pmi_description", nullable=true)
     private String pmiDescription;
-    @Column(nullable=true)
+    @Column(name="qr_code", nullable=true)
     private String qrCode;
-    @Column(nullable=true)
+    @Column(name="product_image", nullable=true)
     private String productImage;
-    @Column(nullable=true)
+    @Column(name="quantity", nullable=true)
     private Integer quantity;
 
     public long getId() {

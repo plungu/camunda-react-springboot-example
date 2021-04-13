@@ -26,7 +26,6 @@ spring:
   h2.console.enabled: true
 
   jpa:
-    generate-ddl: false
     hibernate.ddl-auto: none
 
 camunda.bpm:
