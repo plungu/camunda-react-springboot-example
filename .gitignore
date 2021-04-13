@@ -27,3 +27,5 @@ application-dev.properties
 *.iml
 /angular-starter/
 *.nogit
+*/.DS_Store
+/.DS_Store
