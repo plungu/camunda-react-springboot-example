@@ -8,6 +8,7 @@ const Main = require('Main');
 const Home = require('./components/home/Home');
 const ItemHome = require('ItemHome');
 const OrderHome = require('OrderHome');
+const ContactHome = require('ContactMain');
 
 // tag::styles[]
 require('style!css!foundation-sites/dist/foundation.css');
@@ -21,6 +22,7 @@ ReactDOM.render(
           <IndexRoute component={Home}/>
           <Route path="orders" component={OrderHome}/>
           <Route path="items" component={ItemHome}/>
+          <Route path="contact" component={ContactHome}/>
         </Route>
       </Router>,
       document.getElementById('react')

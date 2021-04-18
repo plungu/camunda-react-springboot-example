@@ -1,0 +1,6 @@
+# Base properties for setting up custom app environment
+# override properties for environments in respective file
+# e.g. application-prod.properties for production
+
+camunda.bpm.client:
+    base-url: http://localhost:8080/engine-rest

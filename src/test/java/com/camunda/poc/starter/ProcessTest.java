@@ -3,6 +3,7 @@ package com.camunda.poc.starter;
 import org.apache.ibatis.logging.LogFactory;
 import org.camunda.bpm.engine.test.ProcessEngineRule;
 import org.camunda.bpm.spring.boot.starter.test.helper.StandaloneInMemoryTestConfiguration;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.camunda.bpm.engine.test.assertions.ProcessEngineTests.*;
+
 //import static org.junit.Assert.*;
 
 /**
@@ -24,6 +26,11 @@ public class ProcessTest {
   static {
     LogFactory.useSlf4jLogging(); // MyBatis
   }
+
+//  @Before
+//  public void setUp() {
+//    init(processEngineRule.getProcessEngine());
+//  }
 
   @Rule
   public final ProcessEngineRule processEngine = new StandaloneInMemoryTestConfiguration().rule();

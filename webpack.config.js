@@ -95,12 +95,11 @@ module.exports = {
             MessageList: 'src/main/js/reactjs/application/components/message/MessageList.jsx',
             MessageFilterBar: 'src/main/js/reactjs/application/components/message/MessageFilterBar.jsx',
 
-            ContactMain: 'src/main/js/reactjs/application/components/contact/ContactMain.jsx',
-            ContactLine: 'src/main/js/reactjs/application/components/contact/ContactLine.jsx',
-            ContactList: 'src/main/js/reactjs/application/components/contact/ContactList.jsx',
-            ContactDetail: 'src/main/js/reactjs/application/components/contact/ContactDetail.jsx',
-            ContactFilterBar: 'src/main/js/reactjs/application/components/contact/ContactFilterBar.jsx',
-            Contact: 'src/main/js/reactjs/application/components/contact/Contact.jsx',
+            ContactMain: 'src/main/js/reactjs/application/components/contact/Home.jsx',
+            ContactLine: 'src/main/js/reactjs/application/components/contact/Detail.jsx',
+            ContactList: 'src/main/js/reactjs/application/components/contact/DetailForm.jsx',
+            ContactDetail: 'src/main/js/reactjs/application/components/contact/FilterBar.jsx',
+            ContactFilterBar: 'src/main/js/reactjs/application/components/contact/info.jsx',
 
             uriListConverter: 'src/main/js/api/uriListConverter.js',
             uriTemplateInterceptor: 'src/main/js/api/uriTemplateInterceptor.js',
