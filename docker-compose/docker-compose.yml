@@ -5,7 +5,7 @@ services:
 ########################################
 # Camunda Service
 ########################################
-  camunda-node-1:
+  camunda-react-node-1:
     build:
       context: ../
     links:

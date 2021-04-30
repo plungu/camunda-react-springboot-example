@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0077)file:///Users/paullungu/projects/camunda-react-springboot-example/README.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Doc Writer">
 <title>Workflow Business Case: Ordering with Approvals and Complex Business Data</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./README_files/css">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
 /* Uncomment @import statement to use as custom stylesheet */
@@ -449,133 +449,138 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel3">
-<li><a href="#_go_to_code">Go to Code</a></li>
-<li><a href="#_use_case">Use-Case</a></li>
-<li><a href="#_running_the_use_case">Running the use-case</a>
-<ul class="sectlevel2">
-<li><a href="#_testing_with_postman">Testing with Postman</a></li>
-<li><a href="#_see_it_running">See it running</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_go_to_code">Go to Code</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_use_case">Use-Case</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_running_the_use_case">Running the use-case</a>
+<ul class="sectlevel4">
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_1_use_spring_boot_at_the_command_line">1. Use spring-boot at the command line</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_2_use_docker_compose_this_should_allow_you_to_simple_run_the_in_a_self_contained_manner_you_must_have_docker_installed_on_the_machine">2. Use docker-compose. This should allow you to simple run the in a self contained manner. You must have docker installed on the machine.</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_3_use_kuberneties_this_is_still_in_progress">3. Use Kuberneties. This is still in progress.</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_using_profiles">Using Profiles</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_testing_with_postman">Testing with Postman</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_see_it_running">See it running</a></li>
 </ul>
 </li>
-<li><a href="#_architecture">Architecture</a>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_architecture">Architecture</a>
 <ul class="sectlevel2">
-<li><a href="#_access_to_the_workflow_execution_context">Access to the workflow execution context</a></li>
-<li><a href="#_patterns_for_polyglot_programming">Patterns for Polyglot Programming</a></li>
-<li><a href="#_reactjs_ui_integration">ReactJS UI Integration</a></li>
-<li><a href="#_handling_business_data_and_ui_integration">Handling Business Data and UI Integration</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_access_to_the_workflow_execution_context">Access to the workflow execution context</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_patterns_for_polyglot_programming">Patterns for Polyglot Programming</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_reactjs_ui_integration">ReactJS UI Integration</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_handling_business_data_and_ui_integration">Handling Business Data and UI Integration</a></li>
 </ul>
 </li>
-<li><a href="#_developing_with_this_poc_starter_project">Developing with this PoC Starter Project</a>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_developing_with_this_poc_starter_project">Developing with this PoC Starter Project</a>
 <ul class="sectlevel3">
-<li><a href="#_setting_up_react_for_dev">Setting up React for Dev</a></li>
-<li><a href="#_mail_slurper">Mail Slurper</a></li>
-<li><a href="#_running_the_server_for_dev">Running the server for Dev</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_setting_up_react_for_dev">Setting up React for Dev</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_running_the_server_for_dev">Running the server for Dev</a></li>
+<li><a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#_mail_slurper">Mail Slurper</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect3 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-6">
+<div class="sect3 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-6">
 <h4 id="_go_to_code"><a href="https://github.com/plungu/camunda-react-springboot-example">Go to Code</a></h4>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-8">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-8">
 <p>See the <a href="https://github.com/plungu/camunda-react-springboot-example">code in github</a>. You can downlaod and run the project.</p>
 </div>
 </div>
-<div class="sect1 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-10">
+<div class="sect1 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-10">
 <h2 id="_use_case">Use-Case</h2>
 <div class="sectionbody">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-12">
-<p>Ordering use case is focused on demonstrating the ordering process through Web Based UI, Notifications and Camunda workflow. The ordering process models have several human review steps where a approval or rejection can happen and systems integration steps where communication with API&#8217;s happens.</p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-12">
+<p>Ordering use case is focused on demonstrating the ordering process through Web Based UI, Notifications and Camunda workflow. The ordering process models have several human review steps where a approval or rejection can happen and systems integration steps where communication with API’s happens.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-14">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-14">
 <p>Below is a collaboration diagram illistrating how the different particpants interact with each other. Notice this is not a technical diagram and is soley for understanding. <a href="https://cawemo.com/">Camunda Cawemo</a> was used to model this BPMN diagram. The technical models that are deployed are in <code>./src/main/resources/processes</code></p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-16">
-<p><span class="image"><img src="./docs/images/use-case.png" alt="Use Case"></span></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-16">
+<p><span class="image"><img src="./README_files/use-case.png" alt="Use Case"></span></p>
 </div>
-<div class="exampleblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-17">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-17">
 <div class="content">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-18">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-18">
 <p>The above process use case is initiated when product inventory becomes available. The <strong>Inventory Notification Process</strong> is activated by a scheduled job BPMN Timer event, which is fired off every day. The notification process checks the inventory levels and determines if there are eligible employees for the existing inventory.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-20">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-20">
 <p>The eligibility is determined by information queried from the entitlement system as well as a DMN Business Rule table. Once eligibility is established then an email is sent to the eligible employees with links to the Ordering application.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-22">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-22">
 <p>An order is started in the custom ordering UI. The order can be saved at any point in the order cache/db. When the order is complete it is sent for approval. The <strong>Order Approval Process</strong> is started and waits for a manager to approve the order. Once approved the the <strong><em>Local</em></strong> inventory is updated and notification of approval is sent to the employee.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-24">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-24">
 <p>The <strong>Stock Replenishment Process</strong> is also initiated by a BPMN start timer event, once a day. It checks the product inventory levels and notifies the inventory manager when inventory is low and reorders inventory upon approval the sends a request to the <strong>Inventory Provider</strong> to create more inventory. Which subsequently updates the <strong>local</strong> inventory. Which of course potentially starts the entire process over.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-28">
+<div class="sect1 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-28">
 <h2 id="_running_the_use_case">Running the use-case</h2>
 <div class="sectionbody">
-<div class="admonitionblock important has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-29">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-Running the app once with no profile is necessary to initalize the Camunda database.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-30">
-<div class="content">
-<pre class="CodeRay highlight"><code>mvn spring-boot:run</code></pre>
-</div>
-</div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-34">
-<p>Then again with the profiles to initialize the use case</p>
-</div>
-<div class="listingblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-35">
+<div class="sect4 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-30">
+<h5 id="_1_use_spring_boot_at_the_command_line">1. Use spring-boot at the command line</h5>
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-31">
 <div class="content">
 <pre class="CodeRay highlight"><code>mvn spring-boot:run -Dspring.profiles.active=ordering,email,gui,cors</code></pre>
 </div>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-39">
+</div>
+<div class="sect4 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-35">
+<h5 id="_2_use_docker_compose_this_should_allow_you_to_simple_run_the_in_a_self_contained_manner_you_must_have_docker_installed_on_the_machine">2. Use docker-compose. This should allow you to simple run the in a self contained manner. You must have docker installed on the machine.</h5>
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-37">
+<div class="content">
+<pre class="CodeRay highlight"><code>docker-compose up</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-41">
+<h5 id="_3_use_kuberneties_this_is_still_in_progress">3. Use Kuberneties. This is still in progress.</h5>
+
+</div>
+<div class="sect2 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-45">
+<h3 id="_using_profiles">Using Profiles</h3>
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-46">
+<div class="content">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-47">
 <p><strong>Profiles</strong> can be specified at the command line when the application starts. The notation is as follows.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-41">
-<p><code>-Dspring.profiles.active=ordering,email,cors</code></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-49">
+<p><code>-Dspring.profiles.active=ordering,gui,email,cors</code></p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-43">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-51">
 <p>Or you can use the application.properties file to specify the profile.</p>
 </div>
-<div class="listingblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-45">
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-53">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span style="color:#606">spring.profiles.active</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#D20">ordering,email,gui,cors</span></span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="yaml"><span style="color:#606">spring.profiles.active</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#D20">ordering,gui,email,cors</span></span></code></pre>
 </div>
 </div>
-<div class="admonitionblock important has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-49">
+</div>
+</div>
+<div class="admonitionblock important has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-58">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <div class="title">Important</div>
 </td>
 <td class="content">
-Using Camunda Enterprise - it&#8217;s necessary to request a <a href="https://camunda.com/download/enterprise/">Camunda Enterprise License</a>.
+Using Camunda Enterprise - it’s necessary to request a <a href="https://camunda.com/download/enterprise/">Camunda Enterprise License</a>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
-<div class="exampleblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-51">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-60">
 <div class="content">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-52">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-61">
 <p>Update the settings.xml file in the project home with the credentials that you get from Camunda. This will allow you to pull the enterprise artifacts from our nexus repository.</p>
 </div>
 </div>
 </div>
-<div class="admonitionblock note has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-54">
+<div class="admonitionblock note has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-63">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
@@ -583,164 +588,181 @@ Using Camunda Enterprise - it&#8217;s necessary to request a <a href="https://ca
 You may need to configure a proxy to reach our repository. See the example in the settings.xml.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
-<div class="sect2 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-60">
+</div>
+<div class="sect2 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-69">
 <h3 id="_testing_with_postman">Testing with Postman</h3>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-62">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-71">
 <p>Use the postman collections in the <code>postman</code> folder.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-64">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-73">
 <p>With post-man you can move through the processes simulating REST requests to the app.</p>
 </div>
-<div class="ulist has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-66">
+<div class="ulist has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-75">
 <ul>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-66">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-75">
 <p>starting the processes</p>
 </li>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-67">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-76">
 <p>completing user tasks</p>
 </li>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-68">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-77">
 <p>correlating messages</p>
 </li>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-69">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-78">
 <p>loading test data</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-71">
+<div class="sect2 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-80">
 <h3 id="_see_it_running">See it running</h3>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-72">
-<p><strong>Visit <code><a href="http://&lt;server&gt;:&lt;port&gt;/sr" class="bare">http://&lt;server&gt;:&lt;port&gt;/sr</a></code> to access the React app.</strong></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-81">
+<p><strong>Visit <code><a href="http://%3Cserver%3E:&lt;port&gt;/sr" class="bare">http://&lt;server&gt;:&lt;port&gt;/sr</a></code> to access the React app.</strong></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-75">
+<div class="sect1 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-84">
 <h2 id="_architecture">Architecture</h2>
 <div class="sectionbody">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-77">
-<p><span class="image"><img src="./docs/images/architecture.png" alt="Use Case"></span></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-86">
+<p><span class="image"><img src="./README_files/architecture.png" alt="Use Case"></span></p>
 </div>
-<div class="exampleblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-78">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-87">
 <div class="content">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-79">
-<p>The diagram above illustrates the interactions and logical components of the app. Note the app is all packed together into one artifact for easier development and PoC ing. But each component could be easily it&#8217;s own deployable artifact.</p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-88">
+<p>The diagram above illustrates the interactions and logical components of the app. Note the app is all packed together into one artifact for easier development and PoC ing. But each component could be easily it’s own deployable artifact.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-81">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-90">
 <p>Note the <strong>Custom UI</strong> is not depicted. For all intents an purposes it is a completely seperate app and is not depended on the workflow. The interaction between the <strong>Ordering UI</strong> and the workflow is asynchronous. Since the <strong>Notification</strong> workflow simple directs the user to the <strong>Order UI</strong> which then allows a user to complete the order without interacting with the workflow.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-83">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-92">
 <p>Once an order is complete the Approval Workflow is started but is not dependent on the order UI in any way. The approval workflow interacts with users and the inventory API.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-85">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-94">
 <p>Purple lines signify point-to-point synchronous HTTP/REST interactions with the workflow and other components.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-87">
-<p>This application utilizes mostly synchronous blocking API calls to the JAVA and REST API&#8217;s. Though as explained prevoiusly there are some subtle but important asynchronous and choreographed interactions.</p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-96">
+<p>This application utilizes mostly synchronous blocking API calls to the JAVA and REST API’s. Though as explained prevoiusly there are some subtle but important asynchronous and choreographed interactions.</p>
 </div>
 </div>
 </div>
-<div class="sect2 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-89">
+<div class="sect2 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-98">
 <h3 id="_access_to_the_workflow_execution_context"><a id="workflow-execution"></a>Access to the workflow execution context</h3>
-<div class="exampleblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-90">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-99">
 <div class="content">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-91">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-100">
 <p>The workflows in this project utilize the workflow execution to perform actions and interact with other systems and control the flow of custom code execution through the use of Java Delegate and Execution Listeners.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-93">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-102">
 <p><strong>Java Delegates</strong> as shown below are marker interfaces that allow the executing class to be passed the execution context know as the DelegateExecution object. This object contains many functions that allow the Delegate to interact with the engine and data in the process. This is also a natural extension point that can be used to integrate with other systems. An example would be calling an email service to send email based on workflow variables.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-95">
-<p><span class="image"><img src="./docs/images/java-delegate.png" alt="Java Delegate"></span></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-104">
+<p><span class="image"><img src="./README_files/java-delegate.png" alt="Java Delegate"></span></p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-97">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-106">
 <p><strong>Execution Listeners</strong> function in much the same way as a JavaDelegate and the interfaces can be used interchangeably. Conceptually the execution listener is intended to be placed in the process in a more subtle way. <strong>Execution Listeners</strong> are placed in the execution on events that are part of the workflow execution. See the docs to understand more about <a href="https://docs.camunda.org/manual/latest/user-guide/process-engine/delegation-code/#java-delegate">Delegation Code</a></p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-99">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-108">
 <p><a href="https://docs.camunda.org/manual/7.12/user-guide/process-engine/transactions-in-processes/#understand-asynchronous-continuations">Read more about placing listeners here</a>. Also, in the <a href="https://docs.camunda.org/manual/7.12/user-guide/process-engine/transactions-in-processes/">same doc</a> read about wait states and transaction bounderies to provide more contect on the operation of the engine.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-101">
-<p><span class="image"><img src="./docs/images/execution-listener.png" alt="Execution Listener"></span></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-110">
+<p><span class="image"><img src="./README_files/execution-listener.png" alt="Execution Listener"></span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect2 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-105">
+<div class="sect2 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-114">
 <h3 id="_patterns_for_polyglot_programming">Patterns for Polyglot Programming</h3>
-<div class="sect3 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-106">
+<div class="sect3 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-115">
 <h4 id="_external_task_pattern">External Task Pattern</h4>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-107">
-<p><span class="image"><img src="./docs/images/architecture-external-task.png" alt="Use Case"></span></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-116">
+<p><span class="image"><img src="./README_files/architecture-external-task.png" alt="Use Case"></span></p>
 </div>
-<div class="exampleblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-108">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-117">
 <div class="content">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-109">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-118">
 <p>The red activity above illustrate the external task pattern configuration. The single task is configured as a topic. The control is inverted and a calling worker will application will ask for work from the engine through the external task API. The external task API is quite powerful allowing the caller to request work in bulk and complete tasks in bulk. Also it allows for creating incidents and errors in the engine.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-111">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-120">
 <p>Additionally, the worker application can be written in any technology as it is independet of the Camunda engine.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-113">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-122">
 <p>See the <a href="https://docs.camunda.org/manual/develop/user-guide/ext-client/">external task docs</a> for more about the API.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-115">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-124">
 <p>See the <a href="https://camunda.com/best-practices/invoking-services-from-the-process/#_understanding_and_using_strong_external_tasks_strong">Best Practices</a> for insights on external tasks.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect3 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-118">
+<div class="sect3 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-127">
 <h4 id="_send_and_recieve">Send and Recieve</h4>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-119">
-<p><span class="image"><img src="./docs/images/architecture-send-recieve.png" alt="Use Case"></span></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-128">
+<p><span class="image"><img src="./README_files/architecture-send-recieve.png" alt="Use Case"></span></p>
 </div>
-<div class="exampleblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-120">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-129">
 <div class="content">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-121">
-<p>The <strong>Send and Receive</strong> or bup/sub pattern is used in cases where simplicity in interaction with API&#8217;s is preferred to the power and complexity of the external task api. It also provides some flexibility in the modeling approach as the send activity and receive activity do not need to be in sequence. Other activities can be used in parallel with the send and receive activities.</p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-130">
+<p>The <strong>Send and Receive</strong> or bup/sub pattern is used in cases where simplicity in interaction with API’s is preferred to the power and complexity of the external task api. It also provides some flexibility in the modeling approach as the send activity and receive activity do not need to be in sequence. Other activities can be used in parallel with the send and receive activities.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-123">
-<p>It&#8217;s often required to use a small amount of Java code, <a href="#workflow-execution">see Java Delegate section</a>, with the <strong>Send</strong> task which provides flexibility in implementation and allows integration with other messaging systems. The publishing Send task code should likely be dumb and only do very specific publishing function.</p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-132">
+<p>It’s often required to use a small amount of Java code, <a href="file:///Users/paullungu/projects/camunda-react-springboot-example/README.html#workflow-execution">see Java Delegate section</a>, with the <strong>Send</strong> task which provides flexibility in implementation and allows integration with other messaging systems. The publishing Send task code should likely be dumb and only do very specific publishing function.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-125">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-134">
 <p>The <strong>Receive</strong> task can be correlated through the REST API and any technology can be used to implement the subscribing application. The subscriber would likely live outside the engine application context.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="sect2 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-128">
+<div class="sect2 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-137">
 <h3 id="_reactjs_ui_integration">ReactJS UI Integration</h3>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-129">
-<p><span class="image"><img src="./docs/images/ui.png" alt="User Interface"></span></p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-138">
+<p><span class="image"><img src="./README_files/ui.png" alt="User Interface"></span></p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-131">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-140">
+<div class="content">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-141">
 <p>The Maven frontend-maven-plugin configured in pom.xml is used to build the ReactJS app. The plugin creates a bundle.js file which ends up in <code>src/main/resources/static/built/bundle.js</code>. The static directory makes static resources such as JS and HTML available to the java app.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-133">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-143">
 <p>The Java application boot-straps the ReactJS App through Thymeleaf a java/spring frontend framework. The templates directory <code>src/main/resources/templates/app.html</code> has a HTML file app.html which calls the React app through a <code>&lt;script /&gt;</code> tag loading the HTML into the react div <code>&lt;div id="react"&gt;&lt;/div&gt;</code></p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-135">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-145">
 <p>Thymeleaf ties the Java frontend together using a Spring controller. <code>src/main/java/com/camunda/poc/starter/use-case/service.request/controller/ui/UIServicerequestController.java</code>. Mapping the app context to /sr and calling the app.html.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-137">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-147">
 <p>The React Components are organized under the <code>src\main\js\reactjs</code> folder into a use-case folder then subdivided by component.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-139">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-149">
 <p>Webpack and package.json define the structure and dependencies for the React App that allow and build the app into the bundle.js which is later placed in the static directory as explained previously. Allowing our frontend to load the plain EcmaScript.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-141">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-151">
 <p>Foundation CSS is used for styling <a href="https://get.foundation/sites/docs/index.html" class="bare">https://get.foundation/sites/docs/index.html</a></p>
 </div>
-</div>
-<div class="sect2 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-143">
-<h3 id="_handling_business_data_and_ui_integration">Handling Business Data and UI Integration</h3>
-<div class="admonitionblock tip has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-144">
+<div class="admonitionblock note has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-153">
 <table>
-<tr>
+<tbody><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The react app is built in this manner, wrapped in spring-boot app, for convenience and consistency. This makes dev-ops, demoing and getting started easier and may not be appropriate for other technology stacks and dev-ops scenarios.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-157">
+<h3 id="_handling_business_data_and_ui_integration">Handling Business Data and UI Integration</h3>
+<div class="admonitionblock tip has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-158">
+<table>
+<tbody><tr>
 <td class="icon">
 <div class="title">Tip</div>
 </td>
@@ -748,30 +770,32 @@ You may need to configure a proxy to reach our repository. See the example in th
 see the pattern described in the Camunda Best Practices <a href="https://camunda.com/best-practices/handling-data-in-processes/" class="bare">https://camunda.com/best-practices/handling-data-in-processes/</a> and <a href="https://camunda.com/best-practices/enhancing-tasklists-with-business-data/" class="bare">https://camunda.com/best-practices/enhancing-tasklists-with-business-data/</a>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-146">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-160">
+<div class="content">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-161">
 <p>Often and for numerous reasons we need to consolidate data from different sources. In this app I use JPA and Spring REST with some of springs features to build a custom API. Primarily for making integration with the UI easier. Here are few reasons why I take this approach.</p>
 </div>
-<div class="ulist has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-148">
+<div class="ulist has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-163">
 <ul>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-148">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-163">
 <p>Reduce queries the UI does to the backend</p>
 </li>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-149">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-164">
 <p>Make it easier to build UI components</p>
 </li>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-150">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-165">
 <p>Create abstraction layer that can be used to integrate other technical and business requirements like reporting and security.</p>
 </li>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-151">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-166">
 <p>Have a source of truth for process meta-data</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-153">
+<div class="admonitionblock note has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-168">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
@@ -779,36 +803,38 @@ see the pattern described in the Camunda Best Practices <a href="https://camunda
 Also keep in mind I want to keep every-thing self contained for PoC purposes. Think in logical terms and that these components could be another technology or several other technologies depending on the specific needs.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
-<div class="sect3 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-156">
+</div>
+</div>
+<div class="sect3 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-171">
 <h4 id="_camunda_rest_api">Camunda REST API</h4>
-<div class="exampleblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-157">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-172">
 <div class="content">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-158">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-173">
 <p>Camunda has a powerful rest API. This code repository has many examples of interacting with the CAMUNDA REST API from the custom UI and using postman. See the <code>postman</code> folder in the project home.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-160">
-<p>Import the post man collection and take a look at the queries to start the workflow and correlate messages.</p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-175">
+<p>Import the postman collection and take a look at the queries to start the workflow and correlate messages.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-162">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-177">
 <p>see more <a href="https://docs.camunda.org/manual/latest/reference/rest/">CAMUNDA REST API</a></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect3 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-166">
+<div class="sect3 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-181">
 <h4 id="_jpa_spring_data_repositories">JPA Spring Data Repositories</h4>
-<div class="exampleblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-167">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-182">
 <div class="content">
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-168">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-183">
 <p>A separate API and logically separate data-store is used to query order data.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-170">
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-185">
 <p>We can guarantee the data is updated in the data store with the workflow. See the section above on the JavaDelegates that implement the publishing functionality.</p>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-172">
-<p><a href="https://spring.io/blog/2011/02/10/getting-started-with-spring-data-jpa">Spring Data JPA</a> is the technology used for business data. Spring Data allows for an easy way to create API&#8217;s that are easy for a UI to query. Also an easy way to combine data into a useful form for the UI to consume.</p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-187">
+<p><a href="https://spring.io/blog/2011/02/10/getting-started-with-spring-data-jpa">Spring Data JPA</a> is the technology used for business data. Spring Data allows for an easy way to create API’s that are easy for a UI to query. Also an easy way to combine data into a useful form for the UI to consume.</p>
 </div>
 </div>
 </div>
@@ -816,19 +842,21 @@ Also keep in mind I want to keep every-thing self contained for PoC purposes. Th
 </div>
 </div>
 </div>
-<div class="sect1 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-175">
+<div class="sect1 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-190">
 <h2 id="_developing_with_this_poc_starter_project">Developing with this PoC Starter Project</h2>
 <div class="sectionbody">
-<div class="sect3 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-176">
+<div class="sect3 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-192">
 <h4 id="_setting_up_react_for_dev">Setting up React for Dev</h4>
-<div class="ulist has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-178">
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-194">
+<div class="content">
+<div class="ulist has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-195">
 <ul>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-178">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-195">
 <p>Configure the api endpoint. This is the backend spring-boot server where the react app gets data</p>
 </li>
 </ul>
 </div>
-<div class="listingblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-179">
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-196">
 <div class="content">
 <pre class="CodeRay highlight"><code>In the .env file in the project home directory change the environment variables to match the spring-boot server context.
 
@@ -843,46 +871,48 @@ Also keep in mind I want to keep every-thing self contained for PoC purposes. Th
 * Note, you will need to use the cors profile in this setup and potentially modify the cors config in the spring-boot app.</code></pre>
 </div>
 </div>
-<div class="ulist has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-193">
+<div class="ulist has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-210">
 <ul>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-193">
+<li class="has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-210">
 <p>Run node and server.js by starting a node server in the home directory of the project. You may need to run <code>npm install</code> first.</p>
 </li>
 </ul>
 </div>
-<div class="listingblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-194">
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-211">
 <div class="content">
 <pre class="CodeRay highlight"><code>nodemon server.js</code></pre>
 </div>
 </div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-197">
-<p>also run the web-pack watch in the project home so you can update the bundle as you build reactjs</p>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-214">
+<p>also run the web-pack watch in the project home so you can update the bundle as you modify reactjs</p>
 </div>
-<div class="listingblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-198">
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-215">
 <div class="content">
 <pre class="CodeRay highlight"><code>webpack -w</code></pre>
 </div>
 </div>
-</div>
-<div class="sect3 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-202">
-<h4 id="_mail_slurper">Mail Slurper</h4>
-<div class="listingblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-204">
-<div class="content">
-<pre class="CodeRay highlight"><code>- to use mail slurper for dev
-- cd into /dev-tools/mailslurper-1.14.1-linux
-- execute ./mailslurper</code></pre>
-</div>
-</div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-209">
-<p>Mail slurper is configured by editing the <code>/dev-tools/mailslurper-1.14.1-linux/config.json</code>
-The app is configured to use mail slurper in the <code>application-mail.properties</code></p>
-</div>
-</div>
-<div class="sect3 has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-212">
-<h4 id="_running_the_server_for_dev">Running the server for Dev</h4>
-<div class="admonitionblock note has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-213">
+<div class="admonitionblock important has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-219">
 <table>
-<tr>
+<tbody><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+You may need to install nodejs, nodemon and webpack depending on your environment setup
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-223">
+<h4 id="_running_the_server_for_dev">Running the server for Dev</h4>
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-225">
+<div class="content">
+<div class="admonitionblock note has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-226">
+<table>
+<tbody><tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
@@ -890,26 +920,40 @@ The app is configured to use mail slurper in the <code>application-mail.properti
 you need to run the cors profile when using nodemon
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
-<div class="ulist has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-215">
-<ul>
-<li class="has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-215">
-<p>Also note you can use spring-dev-tools to build front and back-end component in dev mode providing faster restarts and live-reload.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-217">
-<p>for dev mode run the following with the appropriate profiles</p>
-</div>
-<div class="listingblock has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-218">
-<div class="content">
-<pre class="CodeRay highlight"><code>mvn spring-boot:run mvn spring-boot:run -Dspring.profiles.active=servicerequest,integration,cors</code></pre>
-</div>
-</div>
-<div class="admonitionblock warning has-source-line data-line-/home/plungu/projects/my-projects/camunda-react-springboot-example/README.adoc-222">
+<div class="admonitionblock note has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-228">
 <table>
-<tr>
+<tbody><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+you can enable spring-dev-tools to build front and back-end component in dev mode providing faster restarts and live-reload.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-230">
+<p>If you are developing only front-end components than you can user docker-compose and follow the React setup above.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-232">
+<p>cd to the docker-compose directory and run</p>
+</div>
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-233">
+<div class="content">
+<pre class="CodeRay highlight"><code>docker-compose up</code></pre>
+</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-237">
+<p>For development on the backed use run the spring-boot app on command line</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-239">
+<p>You can also run the app in dev mode by uncommenting spring-dev-tools in pom.xml</p>
+</div>
+<div class="admonitionblock warning has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-241">
+<table>
+<tbody><tr>
 <td class="icon">
 <div class="title">Warning</div>
 </td>
@@ -917,7 +961,35 @@ you need to run the cors profile when using nodemon
 spring-dev-tools affects the way Camunda serializes objects into process vars and will cause serialization errors in some cases. So it is commented out in pom.xml by default.
 </td>
 </tr>
-</table>
+</tbody></table>
+</div>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-243">
+<p>run the following with the appropriate profiles</p>
+</div>
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-245">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn spring-boot:run mvn spring-boot:run -Dspring.profiles.active=ordering,gui,email,cors</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3 has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-250">
+<h4 id="_mail_slurper">Mail Slurper</h4>
+<div class="exampleblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-251">
+<div class="content">
+<div class="listingblock has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-252">
+<div class="content">
+<pre class="CodeRay highlight"><code>- to use mail slurper for dev
+- cd into /dev-tools/mailslurper-1.14.1-linux
+- execute ./mailslurper</code></pre>
+</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/paullungu/projects/camunda-react-springboot-example/README.adoc-257">
+<p>Mail slurper is configured by editing the <code>/dev-tools/mailslurper-1.14.1-linux/config.json</code>
+The app is configured to use mail slurper in the <code>application-mail.properties</code></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -926,8 +998,8 @@ spring-dev-tools affects the way Camunda serializes objects into process vars an
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2021-01-19 13:52:31 -0700
+Last updated 2021-04-30 12:39:17 -0600
 </div>
 </div>
-</body>
-</html>
+
+</body></html>
