@@ -1,0 +1,50 @@
+## Running the use-case
+
+===== Option 1. Use spring-boot at the command line
+```
+mvn spring-boot:run -Dspring.profiles.active=ordering,email,gui,cors
+```
+
+===== Option 2. Use docker-compose
+This should allow you to simple run the in a self contained manner. You must have docker installed on the machine.
+```
+docker-compose up
+```
+
+===== Option 3. Use Kuberneties
+This is still in progress.
+
+
+### Using Profiles
+====
+**Profiles** can be specified at the command line when the application starts. The notation is as follows.
+
+`-Dspring.profiles.active=ordering,gui,email,cors`
+
+Or you can use the application.properties file to specify the profile.
+
+```yaml
+spring.profiles.active: ordering,gui,email,cors
+```
+
+====
+
+### Initalizing Data
+IMPORTANT: for the Ordering use-case to run properly some data must be initialized.
+====
+- Contact(s) - must be initialized
+- Stock Items - must be initialized
+
+Both can be initialized by running the appropriate Postman scripts
+
+- Contact Object - run POST stock-items script a few times
+- Stock Items - run POST contact script once
+
+The postman collection is located in the postman directory. Import the collection into Postman and run the appropriate script.
+
+====
+
+TODO: Auto-initalize upon initialization
+
+### See it running
+**Visit `http://<server>:<port>/sr` to access the React app.**

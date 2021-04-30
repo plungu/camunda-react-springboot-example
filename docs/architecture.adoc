@@ -1,0 +1,29 @@
+## Architecture
+
+image:./docs/images/architecture.png[Use Case]
+====
+The diagram above illustrates the interactions and logical components of the app. Note the app is all packed together into one artifact for easier development and PoC ing. But each component could be easily it's own deployable artifact.
+
+Note the *Custom UI* is not depicted. For all intents an purposes it is a completely seperate app and is not depended on the workflow. The interaction between the *Ordering UI* and the workflow is asynchronous. Since the *Notification* workflow simple directs the user to the *Order UI* which then allows a user to complete the order without interacting with the workflow.
+
+Once an order is complete the Approval Workflow is started but is not dependent on the order UI in any way. The approval workflow interacts with users and the inventory API.
+
+Purple lines signify point-to-point synchronous HTTP/REST interactions with the workflow and other components.
+
+This application utilizes mostly synchronous blocking API calls to the JAVA and REST API's. Though as explained prevoiusly there are some subtle but important asynchronous and choreographed interactions.
+====
+### [[workflow-execution]]Access to the workflow execution context
+====
+The workflows in this project utilize the workflow execution to perform actions and interact with other systems and control the flow of custom code execution through the use of Java Delegate and Execution Listeners.
+
+*Java Delegates* as shown below are marker interfaces that allow the executing class to be passed the execution context know as the DelegateExecution object. This object contains many functions that allow the Delegate to interact with the engine and data in the process. This is also a natural extension point that can be used to integrate with other systems. An example would be calling an email service to send email based on workflow variables.
+
+image:./docs/images/java-delegate.png[Java Delegate]
+
+*Execution Listeners* function in much the same way as a JavaDelegate and the interfaces can be used interchangeably. Conceptually the execution listener is intended to be placed in the process in a more subtle way. *Execution Listeners* are placed in the execution on events that are part of the workflow execution. See the docs to understand more about https://docs.camunda.org/manual/latest/user-guide/process-engine/delegation-code/#java-delegate[Delegation Code]
+
+https://docs.camunda.org/manual/7.12/user-guide/process-engine/transactions-in-processes/#understand-asynchronous-continuations[Read more about placing listeners here]. Also, in the https://docs.camunda.org/manual/7.12/user-guide/process-engine/transactions-in-processes/[same doc] read about wait states and transaction bounderies to provide more contect on the operation of the engine.
+
+image:./docs/images/execution-listener.png[Execution Listener]
+
+====
