@@ -4,7 +4,7 @@ Ordering use case is focused on demonstrating the ordering process through Web B
 
 Below is a collaboration diagram illistrating how the different particpants interact with each other. Notice this is not a technical diagram and is soley for understanding. https://cawemo.com/[Camunda Cawemo] was used to model this BPMN diagram. The technical models that are deployed are in `./src/main/resources/processes`
 
-image:./docs/images/use-case.png[Use Case]
+image:./images/use-case.png[Use Case]
 ====
 The above process use case is initiated when product inventory becomes available. The *Inventory Notification Process* is activated by a scheduled job BPMN Timer event, which is fired off every day. The notification process checks the inventory levels and determines if there are eligible employees for the existing inventory.
 

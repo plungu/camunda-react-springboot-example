@@ -1,24 +1,8 @@
 = Workflow Business Case: Ordering with Approvals and Complex Business Data
 Doc Writer <paul.lungu@camunda.com>
 v1.0, 2020-06-01
-:toc: right
 
-#### https://github.com/plungu/camunda-react-springboot-example[Go to Code]
 
-See the https://github.com/plungu/camunda-react-springboot-example[code in github]. You can downlaod and run the project.
+## https://plungu.github.io/camunda-react-springboot-example/index.html[Go to Docs]
 
-include::docs/use-case.adoc[]
-
-include::docs/running-use-case.adoc[]
-
-include::docs/using-enterprise-camunda.adoc[]
-
-include::docs/postman-testing.adoc[]
-
-include::docs/architecture.adoc[]
-
-include::docs/ui-integration.adoc[]
-
-include::docs/handling-business-data.adoc[]
-
-include::docs/developer-how-to.adoc[]
+https://plungu.github.io/camunda-react-springboot-example/index.html
