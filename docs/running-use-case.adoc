@@ -47,4 +47,20 @@ The postman collection is located in the postman directory. Import the collectio
 TODO: Auto-initalize upon initialization
 
 ### See it running
-**Visit `http://<server>:<port>/sr` to access the React app.**
+**Visit `http://<server>:<port>/app.html` to access the React app.**
+
+==== Steps to run the Demo
+
+1) Initialize the data with Postman
+
+2) Open Cockpit Observe the Approve PM Order workflow
+
+3) Run the Order in React UI
+
+4) Open Cockpit Observe the Approve PM Order workflow again
+
+5) Open the MailSluper UI
+http://localhost:9090/#
+Click the links in the email to approve the task
+
+6) Open Cockpit Observe the Approve PM Order workflow and view the history
