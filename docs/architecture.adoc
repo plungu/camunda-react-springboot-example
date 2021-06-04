@@ -12,18 +12,4 @@ Purple lines signify point-to-point synchronous HTTP/REST interactions with the 
 
 This application utilizes mostly synchronous blocking API calls to the JAVA and REST API's. Though as explained prevoiusly there are some subtle but important asynchronous and choreographed interactions.
 ====
-### [[workflow-execution]]Access to the workflow execution context
-====
-The workflows in this project utilize the workflow execution to perform actions and interact with other systems and control the flow of custom code execution through the use of Java Delegate and Execution Listeners.
 
-*Java Delegates* as shown below are marker interfaces that allow the executing class to be passed the execution context know as the DelegateExecution object. This object contains many functions that allow the Delegate to interact with the engine and data in the process. This is also a natural extension point that can be used to integrate with other systems. An example would be calling an email service to send email based on workflow variables.
-
-image:./docs/images/java-delegate.png[Java Delegate]
-
-*Execution Listeners* function in much the same way as a JavaDelegate and the interfaces can be used interchangeably. Conceptually the execution listener is intended to be placed in the process in a more subtle way. *Execution Listeners* are placed in the execution on events that are part of the workflow execution. See the docs to understand more about https://docs.camunda.org/manual/latest/user-guide/process-engine/delegation-code/#java-delegate[Delegation Code]
-
-https://docs.camunda.org/manual/7.12/user-guide/process-engine/transactions-in-processes/#understand-asynchronous-continuations[Read more about placing listeners here]. Also, in the https://docs.camunda.org/manual/7.12/user-guide/process-engine/transactions-in-processes/[same doc] read about wait states and transaction bounderies to provide more contect on the operation of the engine.
-
-image:./docs/images/execution-listener.png[Execution Listener]
-
-====

@@ -18,14 +18,12 @@ IMPORTANT: You will need to use the cors profile in this setup and potentially m
 
 
 Run node and server.js by starting a node server in the home directory of the project. You may need to run `npm install` first.
-```
-nodemon server.js
-```
+
+    nodemon server.js
 
 Run the web-pack watch in the project home so you can update the bundle as you modify reactjs
-```
-webpack -w
-```
+
+    webpack -w
 
 IMPORTANT: You may need to install nodejs, nodemon and webpack depending on your environment setup
 
@@ -40,10 +38,9 @@ NOTE: you can enable spring-dev-tools to build front and back-end component in d
 
 If you are developing only front-end components than you can user docker-compose and follow the React setup above.
 
-cd to the docker-compose directory and run
-```
-docker-compose up
-```
+    cd to the docker-compose directory and run
+
+    docker-compose up
 
 For development on the backed use run the spring-boot app on command line
 
@@ -53,9 +50,7 @@ WARNING: spring-dev-tools affects the way Camunda serializes objects into proces
 
 run the following with the appropriate profiles
 
-```
-mvn spring-boot:run mvn spring-boot:run -Dspring.profiles.active=ordering,gui,email,cors
-```
+    mvn spring-boot:run mvn spring-boot:run -Dspring.profiles.active=ordering,gui,email,cors
 
 ====
 
@@ -63,10 +58,10 @@ mvn spring-boot:run mvn spring-boot:run -Dspring.profiles.active=ordering,gui,em
 ====
 Use mail slurper consuming mail messages sent by the workflow. This is an easy way to test email integrations.
 
-```
-- cd into /dev-tools/mailslurper-1.14.1-<dist>
-- execute ./mailslurper
-```
+    cd into /dev-tools/mailslurper-1.14.1-<dist>
+
+    execute ./mailslurper
+
 Mail slurper is configured by editing the `/dev-tools/mailslurper-1.14.1-linux/config.json`
 The app is configured to use mail slurper in the `application-mail.properties`
 ====

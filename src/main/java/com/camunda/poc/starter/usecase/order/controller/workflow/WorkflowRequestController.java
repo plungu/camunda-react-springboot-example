@@ -8,14 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-@Profile("odering")
-@RestController
+@Profile("ordering")
+@Controller
 public class WorkflowRequestController {
 
 	private final Logger LOGGER = Logger.getLogger(Class.class.getName());
@@ -71,6 +72,19 @@ public class WorkflowRequestController {
 
 		return "replenish";
 	}
+
+	@RequestMapping(value = "/completeOrderReviewTask", method = RequestMethod.GET)
+	public String completeOrderReviewTask(@RequestParam("businessKey") String businessKey,
+											@RequestParam("approved") boolean approved) {
+
+		Map<String, Object> taskVariables = new HashMap<>();
+		taskVariables.put("approved", approved);
+
+		finishTask(businessKey, taskVariables);
+
+		return "approval";
+	}
+
 
 
 	private  void finishTask(String businessKey, Map taskVariables){
